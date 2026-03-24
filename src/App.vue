@@ -2,7 +2,7 @@
 <template>
   <div class="app">
     <!-- 导航栏 -->
-    <NavigationBar />
+    <TheNavbar />
 
     <!-- 内容区域 -->
     <div class="app-content">
@@ -24,7 +24,7 @@
 <script setup lang="ts" name="App">
   import { computed } from 'vue'
   import { useRoute } from 'vue-router'
-  import NavigationBar from './components/NavigationBar.vue'
+  import TheNavbar from './components/TheNavbar.vue'
   import Footer from './components/Footer.vue'
 
   const route = useRoute()

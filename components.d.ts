@@ -12,11 +12,19 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Footer: typeof import('./src/components/Footer.vue')['default']
+    HomeAnnouncements: typeof import('./src/components/home/HomeAnnouncements.vue')['default']
+    HomeFollowingBar: typeof import('./src/components/home/HomeFollowingBar.vue')['default']
+    HomeFollowingList: typeof import('./src/components/home/HomeFollowingList.vue')['default']
+    HomePostCard: typeof import('./src/components/home/HomePostCard.vue')['default']
+    HomePostEditor: typeof import('./src/components/home/HomePostEditor.vue')['default']
+    HomePostList: typeof import('./src/components/home/HomePostList.vue')['default']
+    HomeTopicTrends: typeof import('./src/components/home/HomeTopicTrends.vue')['default']
     NavigationBar: typeof import('./src/components/NavigationBar.vue')['default']
     PostCard: typeof import('./src/components/home/PostCard.vue')['default']
     PostEditor: typeof import('./src/components/home/PostEditor.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TheNavbar: typeof import('./src/components/TheNavbar.vue')['default']
     TopicTrends: typeof import('./src/components/home/TopicTrends.vue')['default']
   }
 }

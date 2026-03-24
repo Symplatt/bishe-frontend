@@ -1,22 +1,61 @@
 /* src/styles/global.css */
 
+/* 1. 引入字体 (也可以在 index.html 里引入) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Noto+Serif+SC:wght@400;700&family=Share+Tech+Mono&display=swap');
+
+/* 2. 定义全局 CSS 变量 (Design Tokens) */
 :root {
-  --header-height: 72px; /* 导航栏高度 */
+  /* --- 尺寸变量 --- */
+  --header-height: 64px;
+
+  /* --- 字体栈定义 --- */
+  --font-main: 'Noto Serif SC', 'Songti SC', serif;
+  --font-decorative: 'Cinzel Decorative', cursive;
+  --font-tech: 'Share Tech Mono', monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* --- 主题颜色 (现代极客暗黑风) --- */
+  --color-bg-base: #0b0c10; /* 页面最底层背景 */
+  --color-bg-panel: #15161a; /* 卡片/面板背景 */
+  --color-bg-panel-hover: #1f2029; /* 卡片悬浮背景 */
+
+  --color-primary: #06b6d4; /* 主色调：青色 (Cyan) */
+  --color-secondary: #8b5cf6; /* 辅色调：靛紫 (Indigo) */
+
+  --color-text-main: #e0e0e0; /* 主文本色 */
+  --color-text-muted: #888888; /* 弱化文本色 */
+  --color-border: #2a2b32; /* 边框颜色 */
 }
 
+/* 3. 设置全站默认字体与重置 */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-.app-content {
-  flex: 1;
+body {
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-base);
 }
 
+/* 4. 结构容器 (Structure Container) - 全局复用 */
 .page-container {
   width: 100%;
   max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+/* 5. 通用工具类 (Utility Classes) */
+.font-deco {
+  font-family: var(--font-decorative);
+}
+.font-tech {
+  font-family: var(--font-tech);
+}
+.font-sans {
+  font-family: var(--font-sans);
 }

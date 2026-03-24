@@ -1,0 +1,19 @@
+{
+  "output": {
+    "filePath": "D:/repomix/frontend-repomix.xml",
+    "style": "xml"
+  },
+  "include": ["src/**/*", "index.html", "package.json", "vite.config.ts"],
+  "ignore": {
+    "customPatterns": [
+      "package-lock.json",
+      "repomix-output.xml",
+      "components.d.ts",
+      "public/**/*",
+      "scripts/**/*",
+      ".prettierrc.json",
+      ".stylelintrc.json",
+      "README.md"
+    ]
+  }
+}
